@@ -1,7 +1,7 @@
 
 public class Node {
-	private Node next; // Ò»¸öÍ·½áµã
-    private int item;            // Êı¾İ
+	private Node next; // ä¸‹å„èŠ‚ç‚¹çš„ä¿¡æ¯
+    private int item;            // å†…å®¹
 	public Node() {
 		super();
 		// TODO Auto-generated constructor stub

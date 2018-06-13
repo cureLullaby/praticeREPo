@@ -1,24 +1,24 @@
 
 
 public class Link {
-	private  Node first; //Í·½áµã
-	public int N; //Á´±í³¤¶È
+	private  Node first; //å¤´ç»“ç‚¹
+	public int N; //é“¾è¡¨é•¿åº¦
 	
 	public Link() {
         first = null;
         N = 0;
     }
 	
-	//±íÍ·Ìí¼ÓĞÂ½Úµã
+	//è¡¨å¤´æ·»åŠ æ–°èŠ‚ç‚¹
 	public void addNode(int item){
-		//Ô­À´µÄ½Úµã
+		//åŸæ¥çš„èŠ‚ç‚¹
 		Node temp = first;
 		first = new Node();
 		first.setItem(item);
 		first.setNext(temp);
 		N++;
 	}
-	//É¾³ıÎ²½Úµã
+	//åˆ é™¤å°¾èŠ‚ç‚¹
 	public void deleteLastNode(){
 		if (N == 0){
 			return ;
@@ -33,7 +33,7 @@ public class Link {
 			N--;
 		}
 	}
-	//É¾³ıÖÆ¶¨Î»ÖÃµÄ½Úµã
+	//åˆ é™¤åˆ¶å®šä½ç½®çš„èŠ‚ç‚¹
 	public void deleteNode(int index){
 		if(index == 1){
 			first = null;
@@ -52,7 +52,7 @@ public class Link {
 			
 		}
 	}
-	//Ö¸¶¨Î»ÖÃÌí¼Ó½Úµã
+	//æŒ‡å®šä½ç½®æ·»åŠ èŠ‚ç‚¹
 	public void addToIndex(int position,int item){
 		if(position > N + 1 ){
 			System.out.println("out of bonds");
@@ -72,7 +72,7 @@ public class Link {
 			}
 		}
 	}
-	//²é¿´Á´±íÊÇ·ñ´æÔÚÄ³¸öÖµ
+	//æŸ¥çœ‹é“¾è¡¨æ˜¯å¦å­˜åœ¨æŸä¸ªå€¼
 	public boolean find(int key){
 		for(Node i = first ; i != null ; i = i.getNext()){
 			if(i.getItem() == key){
