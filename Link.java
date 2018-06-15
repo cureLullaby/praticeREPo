@@ -90,14 +90,30 @@ public class Link {
 		}
 		return str.toString();
 	}
-
+	//修改当前节点的值
+	public void update(int index , int newValue){
+		if(index > N + 1){
+			System.out.println("out of bonds!");
+		}else{
+			int position = 1;
+			for (Node i = first ; i != null; i = i.getNext()) {
+				if(position  == index){
+					i.setItem(newValue);
+					break;
+				}
+				position ++;
+			}
+		}
+	}
 	public static void main(String[] args) {
 		Link link = new Link();
 		link.addNode(9);
 		link.addNode(8);
 		link.addNode(7);
 		link.addNode(5);
-//		System.out.println(link.toString());
+		link.update(3, 88);
+		link.addToIndex(2, 55);
 		System.out.println(link);
 	}
+	
 }
